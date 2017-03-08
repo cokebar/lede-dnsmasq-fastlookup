@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dnsmasq
-PKG_VERSION:=2.77test4
+PKG_VERSION:=2.77test4-fastlookup-3390db4
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/infinet/dnsmasq.git
-PKG_SOURCE_VERSION:=f5cdd6ed76e2426f41dc0f43b6d922a0aaa03a92
+PKG_SOURCE_VERSION:=3390db49482fdebb3003b9c4e2063c8020c588e6
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 
 PKG_LICENSE:=GPL-2.0
