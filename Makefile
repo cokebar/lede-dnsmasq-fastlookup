@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dnsmasq
-PKG_VERSION:=2.77test4-fastlookup20170308
+PKG_VERSION:=2.77test4-fastlookup20170316
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
@@ -153,6 +153,8 @@ define Package/dnsmasq/install
 	$(INSTALL_BIN) ./files/dnsmasq.init $(1)/etc/init.d/dnsmasq
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/ntp
 	$(INSTALL_DATA) ./files/dnsmasqsec.hotplug $(1)/etc/hotplug.d/ntp/25-dnsmasqsec
+	$(INSTALL_DIR) $(1)/usr/share/dnsmasq
+	$(INSTALL_DATA) ./files/rfc6761.conf $(1)/usr/share/dnsmasq/
 endef
 
 Package/dnsmasq-dhcpv6/install = $(Package/dnsmasq/install)
